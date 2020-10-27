@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# The files should need to be executable...
+#     chmod +x ~/.bashrc.d/*.bashrc
+for file in ~/.bashrc.d/*.bashrc;
+do
+	source "$file"
+done
