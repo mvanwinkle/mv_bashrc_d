@@ -5,7 +5,7 @@ if [ -z ${TMUX+x} ]
 then
     # And if TMUX is in our path
     tmux_sessions=`\
-        which tmux 1>/dev/null \
+        which tmux 2>/dev/null 1>/dev/null \
         && tmux ls 2>/dev/null \
     `
     result=$?
