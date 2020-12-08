@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# This is if we're in an interactive shell.
+# Outputting things from .bashrc could cause things like
+# sftp to fail to log in with "Received message too long"
+# so we return if we're not.
+[[ $- == *i* ]] || return
+
 # If we're not in a TMUX session
 if [ -z ${TMUX+x} ]
 then
