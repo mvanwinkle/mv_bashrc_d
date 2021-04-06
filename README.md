@@ -1,6 +1,6 @@
 # mv_bashrc_d
 
-Here is an introduction to this project.
+A collection of my .bashrc files, along with some code that sources them.
 
 # License
 
