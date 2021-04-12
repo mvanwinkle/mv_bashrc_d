@@ -2,6 +2,12 @@
 
 script_dir=$(realpath $( dirname "$0" ) )
 
+if [[ -e ~/.bashrc.d ]]
+then
+	>&2 echo "~/.bashrc.d already exists.  Exiting."
+	exit 1
+fi
+
 echo "Script dir: $script_dir"
 two_up=$(basename $( dirname "$script_dir"))
 etc_dir=""
